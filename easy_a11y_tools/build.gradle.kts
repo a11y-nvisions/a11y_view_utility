@@ -55,8 +55,8 @@ afterEvaluate {
         publications{
             create<MavenPublication>("release") {
                 groupId = "com.github.a11y-nvisions"
-                artifactId = "easy_a11y_tools"
-                version = "1.0.0"
+                artifactId = "a11y_view_utility"
+                version = "master-SNAPSHOT"
             }
 
         }
