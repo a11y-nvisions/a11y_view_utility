@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.easy_a11y_tools"
+    namespace = "com.github.a11y-nvisions.easy_a11y_tools"
     compileSdk = 34
 
     defaultConfig {
@@ -50,15 +50,18 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
-afterEvaluate {
-    publishing {
-        publications{
-            create<MavenPublication>("release") {
-                groupId = "com.github.a11y-nvisions"
-                artifactId = "a11y_view_utility"
-                version = "master-SNAPSHOT"
+
+publishing {
+    publications{
+        create<MavenPublication>("release") {
+            groupId = "com.github.a11y-nvisions"
+            artifactId = "a11y_view_utility"
+            version = "master-SNAPSHOT"
+            afterEvaluate {
+                from(components["release"])
             }
 
         }
+
     }
 }
