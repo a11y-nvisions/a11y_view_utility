@@ -50,14 +50,15 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
+afterEvaluate {
+    publishing {
+        publications{
+            create<MavenPublication>("release") {
+                groupId = "com.github.a11y-nvisions"
+                artifactId = "easy_a11y_tools"
+                version = "1.0.0"
+            }
 
-publishing {
-    publications{
-        create<MavenPublication>("release") {
-            groupId = "com.github.a11y-nvisions"
-            artifactId = "easy_a11y_tools"
-            version = "1.0.0"
         }
-
     }
 }
