@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.a11y_view_utility"
+    namespace = "com.com.a11y_nvisions.a11y_view_utility"
     compileSdk = 34
 
     defaultConfig {

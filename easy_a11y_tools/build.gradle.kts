@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.github.a11y-nvisions.easy_a11y_tools"
+    namespace = "com.a11y_nvisions.easy_a11y_tools"
     compileSdk = 34
 
     defaultConfig {
